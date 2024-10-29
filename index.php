@@ -1,3 +1,15 @@
+<?php 
+    require 'conexion.php';
+    
+    session_start();
+
+    if(isset($_SESSION['username']) && isset($_SESSION['correo']))
+    {
+        $nombre_usuario = $_SESSION['username'];
+        $correo_usuario = $_SESSION['correo'];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +83,7 @@
             <div class="col-lg-6">
                 <div class="row justify-content-center">
                     <div class="col-sm-8 py-5 my-5">
-                        <h2 class="mb-4">About Us</h2>
+                        <h2 class="mb-4">Información</h2>
                         <p>El Colegio San José de Guanentá tiene sus orígenes en la escuela de primeras letras de San Gil, cuando en el año de 1785 el Cabildo solicita, por recomendación del Corregidor de Tunja, la creación en la Villa de una cátedra pública de gramática, la cual comenzó sus labores, como se había mencionado en el capítulo anterior, el 4 de septiembre de 1787. <br><br>En el año de 1824 con la expedición del Decreto del 22 de mayo, el General Francisco de Paula Santander, determinó que el colegio de la provincia del Socorro se estableciera en San Gil y lo denominó “Colegio San José de Guanentá”. San José, por los santos protectores que se habían asignado a la escuela de primeras letras y Guanentá por el nombre de la región donde estaría ubicado. <br>A partir de 1824 para sufragar sus gastos, el colegio San José de Guanentá, además de los dineros de propios, los de las capellanías y de las donaciones de voluntarios, se valía de las rentas del convento suprimido en Vélez y adicional a esto cada estudiante debía cancelas sesenta y cuatro pesos ($64) por el año escolar.</p>
 
                         <p><b>Principalmente se cree que el colegio empezó a funcionar desde cuando fue creada la escuela de primeras letras, según los relatos, en la esquina sureste de la plaza principal (hoy Parque la Libertad), en un lote que había sido donado por la Señora María de los Reyes, de lo cual no se encuentran evidencias en los libros notariales.
